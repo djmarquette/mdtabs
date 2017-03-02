@@ -1,0 +1,398 @@
+@import "./_color.scss";
+$primary: color('blue', 'base');
+$accent: color('orange', 'base');
+html,
+body {
+    height: 100% !important;
+}
+
+// Toast Overrides
+md-toast.md-success-toast-theme {
+    .md-toast-content {
+        background-color: $accent !important;
+        color: white;
+    }
+}
+
+md-toast.md-error-toast-theme {
+    .md-toast-content {
+        background-color: $primary !important;
+        color: white;
+    }
+}
+
+.iconfix {
+    position: relative;
+    top: 6px;
+}
+
+// Name spacing (adds space between first, mid, last and suffix names)
+.name-space {
+    padding-right: .15em;
+}
+
+//List toolbars top and bottom
+md-toolbar {
+    padding-left: 10px;
+    color: white;
+    md-input-container {
+        margin-bottom: -5px;
+    }
+    .md-input-focused {
+        label {
+            color: lighten($primary, 30%) !important;
+        }
+        .md-input {
+            border-color: lighten($primary, 30%) !important;
+        }
+        md-icon {
+            color: lighten($primary, 30%) !important;
+        }
+    }
+}
+
+.toolbar-members {
+    background-color: $primary !important;
+}
+
+.toolbar-candidates {
+    background-color: $primary !important;
+}
+
+.toolbar-reports {
+    position: fixed !important;
+    height: 64px;
+    width: 320px;
+    bottom: 0;
+    padding: 0px 8px;
+    background-color: $primary !important;
+    color: white;
+    z-index: 9999;
+    button, md-button {
+        align-self: center;
+        &.md-icon-button {
+            padding: 0px;
+        }
+    }
+}
+
+//Sets container under tabs to full height, default is partial height
+.fullpage {
+    height: calc(100% - 48px);
+}
+
+// Sidenav col
+.left-col {
+    height: 100%;
+    margin-right: 20px;
+    overflow: hiden;
+    .scroll {
+        position: relative;
+        top: 0;
+        border-top: 4px solid white;
+        width: 320px;
+        .sort-alph {
+            position: relative;
+            top: 8px;
+            right: 8px;
+        }
+    }
+    .memberlist {
+        position: relative;
+        height: calc(100% - 152px);
+    }
+}
+
+@media (max-width: 600px) {
+    .welcomesidenav {
+        min-width: 100%;
+    }
+    .main_icon {
+        position: relative;
+        top: -30px;
+        svg {
+            max-width: 50% !important;
+            max-height: 50vh !important;
+        }
+        div {
+            font-size: .75em;
+            margin-top: -25px !important;
+        }
+    }
+}
+
+@media (min-width: 960px) {
+    .fullscroll {
+        overflow: scroll !important;
+    }
+    .right-col {
+        height: auto;
+        box-shadow: 0 1px 8px 0 rgba(0, 0, 0, .2), 0 3px 4px 0 rgba(0, 0, 0, .14), 0 3px 3px -2px rgba(0, 0, 0, .12);
+        margin-top: 5px;
+        flex-basis: 250px;
+        overflow: hidden;
+    }
+    .main_icon {
+        max-height: 90%;
+    }
+}
+
+@media (max-width: 959px) {
+    .right-col {
+        box-shadow: 0 0 0 0 !important;
+    }
+    .show-list {
+        position: fixed;
+        top: 8px;
+        left: 50px;
+    }
+//    md-tabs-canvas {
+//        left: 64px;
+//    }
+    .md-tab {
+        padding: 12px 12px;
+    }
+}
+
+//FAB Icon Styling
+.icon-flip-up {
+    transform: scale(1, -1);
+}
+
+.icon-flip-side {
+    transform: scale(1, -1);
+}
+
+.icon-rotate-90 {
+    transform: rotate(90deg);
+}
+
+.icon-rotate-180 {
+    transform: rotate(180deg);
+}
+
+.icon-rotate-270 {
+    transform: rotate(270deg);
+}
+
+md-fab-speed-dial {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+md-fab-speed-dial {
+    md-fab-trigger {
+        .md-fab {
+            background-color: $primary !important;
+        }
+        .md-fab:hover {
+            background-color: darken($primary, 15%) !important;
+            box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12);
+        }
+    }
+    md-fab-actions {
+        .md-fab-action-item {
+            .md-button {
+                background-color: $primary !important;
+                color: white;
+            }
+            .md-button:hover {
+                background-color: $accent !important;
+                box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12);
+            }
+        }
+    }
+}
+
+md-fab-speed-dial.md-scale .md-fab-action-item {
+    transform: scale(.01);
+}
+
+//Index Styling
+.mainnav {
+    a {
+        text-decoration: none !important;
+        color: $primary;
+        i {
+            padding-right: 15px;
+        }
+    }
+    a:hover {
+        color: $accent;
+    }
+    md-list-item:hover {
+        box-shadow: 0 1px 5px 0 rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .12);
+    }
+}
+
+.main_icon {
+    //    opacity: .75;
+    text-align: center;
+    padding: 20px;
+    .icon {
+        border: 1px solid black;
+        display: block;
+        margin: auto;
+    }
+    svg {
+        max-width: 75%;
+        max-height: 75%;
+    }
+    width: 100%;
+    height: 100%;
+    div {
+        margin-top: -50px;
+        color: #F44336;
+    }
+}
+
+//SVG Styles 
+.cls-1 {
+    fill: none;
+}
+
+.cls-2 {
+    isolation: isolate;
+}
+
+.cls-3 {
+    opacity: 0.15;
+}
+
+.cls-11,
+.cls-3,
+.cls-9 {
+    mix-blend-mode: multiply;
+}
+
+.cls-4 {
+    fill: #81d4fa;
+}
+
+.cls-5 {
+    clip-path: url(#clip-path);
+}
+
+.cls-6 {
+    clip-path: url(#clip-path-2);
+}
+
+.cls-7 {
+    stroke: #231f20;
+    stroke-miterlimit: 10;
+    fill: url(#radial-gradient);
+}
+
+.cls-8 {
+    fill: #ff5722;
+}
+
+.cls-8-2 {
+    fill: #F44336;
+}
+
+.cls-9 {
+    opacity: 0.2;
+}
+
+.cls-10 {
+    fill: #ff9800;
+}
+
+.cls-11 {
+    opacity: 0.1;
+}
+
+.cls-12 {
+    fill: #ffc107;
+}
+
+//Table Style
+.md-table {
+    min-width: 100%;
+    border-collapse: collapse;
+    .thin {
+        width: 10% !important;
+    }
+    .table-headers {
+        border-bottom: 1px solid rgb(230, 230, 230);
+        color: rgb(130, 130, 130);
+        text-align: left;
+        font-size: 0.75em;
+        font-weight: 700;
+        padding: 4px 20px 4px 4px;
+    }
+    .table-body {
+        tr:hover, tr:focus {
+            cursor: pointer;
+            background-color: rgba($accent, 0.2);
+        }
+        .table-content {
+            white-space: nowrap;
+            font-size: 0.8em;
+            padding: 4px 20px 4px 4px;
+            min-height: 24px;
+            border-bottom: 1px solid rgba($accent, 0.04);
+        }
+    }
+}
+
+// Sets dialog to fill most of window, prevents content-varied heights
+md-dialog {
+    width: 90%;
+    height: 90%;
+}
+
+.district_head {
+    padding: 10px 10px 0px !important;
+    color: rgba(0, 0, 0, 0.54);
+    text-transform: uppercase;
+    font-size: .9em;
+    font-weight: 600;
+    letter-spacing: .125em;
+}
+
+// MD Icons
+// Rules for sizing the icon.
+.material-icons.md-18 {
+    font-size: 18px;
+}
+
+.material-icons.md-24 {
+    font-size: 24px;
+}
+
+.material-icons.md-36 {
+    font-size: 36px;
+}
+
+.material-icons.md-48 {
+    font-size: 48px;
+}
+
+// Rules for using icons as black on a light background.
+.material-icons.md-dark {
+    color: rgba(0, 0, 0, 0.54);
+}
+
+.material-icons.md-dark.md-inactive {
+    color: rgba(0, 0, 0, 0.26);
+}
+
+// Rules for using icons as white on a dark background.
+.material-icons.md-light {
+    color: rgba(255, 255, 255, 1);
+}
+
+.material-icons.md-light.md-inactive {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+svg {
+    fill: $primary;
+    fill: black;
+    height: 75%;
+    width: 50%;
+    opacity: .25;
+}

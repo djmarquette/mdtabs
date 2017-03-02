@@ -1,0 +1,33 @@
+{
+  "name": "mdtabs",
+  "description": "testbed for mdtabcontrol",
+  "main": "index.js",
+  "authors": [
+    "Dan Marquette"
+  ],
+  "license": "ISC",
+  "moduleType": [
+    "es6"
+  ],
+    "dependencies": {
+    "jquery": "*",
+    "bootstrap": "*",
+    "angular": "*",
+    "angular-route": "*",
+    "angular-resource": "*",
+    "angular-mocks": "*",
+    "angular-material": "*",
+    "angular-aria": "*",
+    "angular-messages": "*",
+    "angular-ui-mask": "*"
+    },
+    "directory" : "app/bower_components",
+    "homepage": "",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ]
+}
